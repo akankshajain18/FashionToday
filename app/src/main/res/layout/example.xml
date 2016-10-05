@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minHeight="?android:attr/listPreferredItemHeight"
+    android:layout_marginTop="@dimen/feed_item_padding_top_bottom"
+    android:layout_marginBottom="@dimen/feed_item_padding_top_bottom"
+    android:clickable="true" >
+
+
+
+    <ImageView
+        android:id="@+id/iv_Pic"
+        android:contentDescription="@string/image_description"
+        android:src="@drawable/noimg"
+        android:layout_alignParentStart="true"
+        android:layout_width="@dimen/feed_item_pic"
+        android:layout_height="@dimen/feed_item_pic"
+        android:paddingStart="@dimen/feed_item_padding_start_end"
+        android:paddingEnd="@dimen/feed_item_padding_start_end"
+        android:scaleType="centerCrop" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_alignBaseline="@+id/iv_Pic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/iv_Pic"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill|start"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Small"
+            android:textSize="@dimen/textsize">
+        </TextView>
+
+        <TextView
+            android:id="@+id/tv_author"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Small"
+            android:textSize="@dimen/textsize">
+        </TextView>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_follow_main"
+        android:layout_alignBaseline="@+id/iv_Pic"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/rounded_rect"
+        android:text="Follow"
+        android:focusable="false"
+        android:gravity="center"
+        android:layout_width="90dip"
+        android:layout_height="30dp"
+        android:textSize="@dimen/textsize"
+        android:textColor="#ffffff"
+        android:layout_alignBottom="@+id/iv_Pic"
+        android:layout_alignParentTop="true"
+        android:layout_alignEnd="@+id/linearLayout1" />
+
+
+</RelativeLayout>
